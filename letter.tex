@@ -16,14 +16,22 @@
 
 \setkomavar{fromname}{Joe Bloggs}
 \setkomavar{fromaddress}{21 Bridge Street \\ Smallville \\ Dunwich DU3 4WE}
-\setkomavar{fromphone}{0123 45679}
+
+% \setkomavar{fromphone}[Telefon: ]{123456798} 
+% Empty brackets remove the description of "Telephon" before the number in the from part.
+\setkomavar{fromphone}[]{0123 45679}
 
 \begin{document}
 
 \begin{letter}{Director \\ Doe \& Co \\ 35 Anthony Road
 \\ Newport \\ Ipswich IP3 5RT}
 
-\KOMAoptions{fromphone=true,fromfax=false}
+\KOMAoptions{
+%    fromalign=right,
+    fromphone=true,
+    fromfax=false
+}
+
 \setkomavar{subject}{Wikipedia}
 \setkomavar{customer}{2342}
 \opening{Dear Sir or Madam,}
